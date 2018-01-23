@@ -1,0 +1,565 @@
+@charset "utf-8";
+@c_red: #ff0000;
+@c_orange: #f67738;
+@c_f9f9f9: #f9f9f9;
+@c_999: #999;
+@c_666: #666;
+@c_333: #333;
+@c_e9: #e9e9e9;
+@c_f5: #f5f5f5;
+@c_blue: #248bd2;
+@c_yellow: #ffde5b;
+@c_green: #0cde01;
+@c_light_orange: #ff9934;
+@c_brown : #997051;
+.c-green{
+	color: @c_green !important;
+}
+.c-yellow{
+	color: @c_yellow !important;
+}
+.c-red{
+	color: @c_red !important;
+}
+.c-3{
+	color: @c_333 !important;
+}
+.c-6{
+	color: @c_666 !important;
+}
+.c-9{
+	color: @c_999 !important;
+}
+.c-brown{
+	color: @c_brown !important;
+}
+
+.hover_animate{
+	-webkit-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+*{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+html {
+	background: #fff;
+	color: #fff
+}
+article,
+aside,
+blockquote,
+body,
+button,
+code,
+dd,
+details,
+div,
+dl,
+dt,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+input,
+legend,
+li,
+menu,
+nav,
+ol,
+p,
+pre,
+section,
+td,
+textarea,
+th,
+ul {
+	margin: 0;
+	padding: 0
+}
+body,
+button,
+input,
+select,
+textarea {
+	font: 12px \5b8b\4f53, arial, sans-serif;
+}
+body,
+html {
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑", arial, sans-serif;
+	background-color: #fff;
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+html {
+	-o-overflow-style: -o-autohiding-scrollbar;
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+	-moz-overflow-scrolling: touch;
+	-o-overflow-scrolling: touch;
+	overflow-scrolling: touch
+}
+img {
+	border: 0;
+	display: inline-block;
+	max-width: 100%;
+	vertical-align:middle;
+}
+input,
+select,
+textarea {
+	font-size: 100%;
+	font-family: "微软雅黑";
+	line-height: 20px;
+	display: inline-block;
+	outline: 0;
+}
+input:focus,
+select:focus,
+textarea:focus{
+	border: 1px solid #735a6f;
+}
+button {
+	background: 0 0;
+	border: none;
+	cursor: pointer
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+th {
+	text-align: inherit
+}
+fieldset,
+img {
+	border: none
+}
+iframe {
+	display: block
+}
+abbr,
+acronym {
+	border: none;
+	font-variant: normal
+}
+del {
+	text-decoration: line-through
+}
+i{
+	font-style:normal;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+	font-style: normal;
+	font-weight: 500
+}
+ol,
+ul {
+	list-style: none
+}
+caption,
+th {
+	text-align: left
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: 500
+}
+q:after,
+q:before {
+	content: ''
+}
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline
+}
+sup {
+	top: -.5em
+}
+sub {
+	bottom: -.25em
+}
+i{
+}
+a {
+	color: #fff;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+a:hover {
+	text-decoration: none
+}
+a,
+ins {
+	text-decoration: none
+}
+a:focus,
+a:focus {
+	outline: 0;
+	text-decoration: none;
+}
+.clearfix:after,
+.clearfix:before {
+	content: "";
+	display: table
+}
+.clearfix:after {
+	clear: both;
+	overflow: hidden
+}
+.clearfix {
+	zoom: 1
+}
+.clear {
+	clear: both;
+	display: block;
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+	overflow: hidden
+}
+.hide {
+	display: none
+}
+.block {
+	display: block
+}
+.fl,
+.fr {
+	display: inline
+}
+.fl {
+	float: left
+}
+.fr {
+	float: right
+}
+button{
+	font-family: "微软雅黑", arial, sans-serif;
+}
+/* @font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1472649494_052516.eot'); IE9
+  src: url('//at.alicdn.com/t/font_1472649494_052516.eot?#iefix') format('embedded-opentype'), IE6-IE8
+  url('//at.alicdn.com/t/font_1472649494_052516.woff') format('woff'), chrome、firefox
+  url('//at.alicdn.com/t/font_1472649494_052516.ttf') format('truetype'), chrome、firefox、opera、Safari, Android, iOS 4.2+
+  url('//at.alicdn.com/t/font_1472649494_052516.svg#iconfont') format('svg'); iOS 4.1-
+} */
+
+@font-face {
+  font-family: 'iconfont';  /* project id："105724" */
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot') format('embedded-opentype'),
+  url('../fonts/iconfont.woff') format('woff'),
+  url('../fonts/iconfont.ttf') format('truetype'),
+  url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+	font-family: iconfont;
+	font-size: 20px;
+	color: #666;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: .2px
+}
+.tc {
+	text-align: center
+}
+.tr {
+	text-align: right
+}
+.text-upper {
+	text-transform: uppercase
+}
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+body{
+	height:auto;
+}
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+	border: none;
+}
+*:focus,
+*:active{outline:none;} /*for IE*/
+*::-moz-focus-inner {border-color: transparent;} /*for mozilla*/
+button{
+	outline:none !important;
+}
+.bootstrap-select .dropdown-toggle:focus{
+	outline:  none !important;
+	outline: 0px auto -webkit-focus-ring-color!important;
+	outline-offset: 0px;
+}
+.bootstrap-select{
+	outline: 0;
+	.btn{
+		border: 1px solid @c_e9;
+		height:34px;
+		border-radius: 0;
+		outline: 0;
+		&:focus{
+			outline: 0 !important;;
+			border:none;
+		}
+	}
+	.dropdown-menu{
+		border-radius: 0;
+		padding: 0;
+		li{
+			a{
+				padding: 6px 10px;
+			}
+		}
+		li a:hover,
+		li.selected,
+		li a:focus{
+			background-color: @c_orange;
+			color: #fff;
+		}
+		li.selected a{
+			color: #fff;
+		}
+	}
+}
+
+label {
+	display: inline;
+}
+
+.regular-checkbox {
+	display: none;
+}
+
+.regular-checkbox + label {
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 0;
+	display: inline-block;
+	position: relative;
+}
+
+.regular-checkbox + label:active, .regular-checkbox:checked + label:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.regular-checkbox:checked + label {
+	background-color: #e9ecee;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+
+.regular-checkbox:checked + label:after {
+	content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: #99a1a7;
+}
+
+
+.big-checkbox + label {
+	padding: 18px;
+}
+
+.big-checkbox:checked + label:after {
+	font-size: 28px;
+	left: 6px;
+}
+
+.tag {
+	font-family: Arial, sans-serif;
+	width: 200px;
+	position: relative;
+	top: 5px;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	float: left;
+}
+
+.radio-1 {
+	width: 193px;
+}
+
+.button-holder {
+	float: left;
+}
+
+/* RADIO */
+
+.regular-radio {
+	display: none;
+}
+
+.regular-radio + label {
+	-webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 50px;
+	display: inline-block;
+	position: relative;
+}
+
+.regular-radio:checked + label:after {
+	content: ' ';
+	width: 12px;
+	height: 12px;
+	border-radius: 50px;
+	position: absolute;
+	top: 3px;
+	background: #99a1a7;
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+	text-shadow: 0px;
+	left: 3px;
+	font-size: 32px;
+}
+
+.regular-radio:checked + label {
+	background-color: #e9ecee;
+	color: #99a1a7;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.regular-radio + label:active, .regular-radio:checked + label:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.big-radio + label {
+	padding: 16px;
+}
+
+.big-radio:checked + label:after {
+	width: 24px;
+	height: 24px;
+	left: 4px;
+	top: 4px;
+}
+.checkbox_wrap{
+	display: inline-block;
+	.txt{
+		position: relative;
+		top:-10px;
+		font-size:14px;
+		color: @c_333;
+	}
+}
+.sm_checkbox{
+	.regular-checkbox+label{
+		padding:7px;
+		&:after{
+			top:-2px;
+			left:0px;
+		}
+	}
+	.txt{
+		font-size:12px;
+		top:-8px;
+		left:4px;
+		font-weight: normal;
+	}
+}
+.sm_radio{
+	.regular-radio+label{
+		padding:7px;
+		&:after{
+			top:2px;
+			left:2px;
+			width: 10px;
+			height: 10px;
+		}
+	}
+	.txt{
+		font-size:12px;
+		top:-8px;
+		left:4px;
+		font-weight: normal;
+	}
+}
+.jiathis_style{
+	box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	span{
+		margin-right:5px !important;
+		box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+	}
+}
+.jiathis_style *{
+	box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+}
+.sweet-alert h2{
+	text-align: center !important;
+}
+.select_group{
+	width:100% !important;
+	margin-bottom:20px;
+}
+@select-arrow: '../images/select-arrow.jpg';
+@select-padding: 10px;
+@select-size: 60%;
+
+select {
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  padding: @select-padding;
+  width: @select-size;
+	border: 1px solid #c5c5c5;
+  // Allows us to use a custom arrow and avoid
+  // the browsers that don't support it.
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    background-image: url(#{@select-arrow});
+    background-position: right 10px top 50%; // better way to background-position
+    background-repeat: no-repeat;
+  }
+	background-image: url(#{@select-arrow});
+	background-position: right 10px top 50%; // better way to background-position
+	background-repeat: no-repeat;
+}
