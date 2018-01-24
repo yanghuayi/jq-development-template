@@ -427,19 +427,19 @@
 
 
 .sweet-alert {
-  $header-height: 40px;
-  $footer-height: 66px;
-  $text-color: #212121;
-  $padding: 24px;
-  $error-color: #d9453c;
+  @header-height: 40px;
+  @footer-height: 66px;
+  @text-color: #212121;
+  @padding: 24px;
+  @error-color: #d9453c;
 
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: $padding;
-  padding-top: $header-height + $padding;
+  padding: @padding;
+  padding-top: @header-height + @padding;
   padding-bottom: 13px;
   text-align: right; // Align buttons
   border-radius: 0;
-  box-shadow: 0 0 14px rgba(black, 0.24),0 14px 28px rgba(black, 0.48);
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.24),0 14px 28px rgba(0, 0, 0, 0.48);
 
   h2 {
     position: absolute;
@@ -448,18 +448,18 @@
     right: 0;
     height: auto;
     font-weight: 400;
-    color: $text-color;
+    color: @text-color;
     margin: 20px 0;
     font-size: 1.2em;
     line-height: 1.25;
     text-align: left;
-    padding: 0 $padding;
+    padding: 0 @padding;
   }
 
   p {
     display: block;
     text-align: center;
-    color: $text-color;
+    color: @text-color;
     font-weight: 400;
     font-size: 14px;
     margin: 20px 0;
@@ -527,16 +527,16 @@
     display: none;
     background: none;
     height: auto;
-    padding: 0 $padding;
+    padding: 0 @padding;
     margin: 0 -20px;
     text-align: left;
     &.show {
-      padding: 0 $padding;
+      padding: 0 @padding;
       display: block;
       ~ fieldset input {
         background: red;
-        border-bottom: 1px solid $error-color;
-        box-shadow: inset 0 -1px 0 $error-color;
+        border-bottom: 1px solid @error-color;
+        box-shadow: inset 0 -1px 0 @error-color;
       }
     }
 
@@ -544,25 +544,8 @@
       display: none;
     }
     p {
-      color: $error-color;
+      color: @error-color;
       margin-top: 0;
     }
   }
-}
-
-
-// Animations
-
-@mixin keyframes($animation-name) {
-  @-webkit-keyframes #{$animation-name} {
-    @content;
-  }
-  @keyframes #{$animation-name} {
-    @content;
-  }
-}
-
-@include keyframes(animateErrorIcon) {
-  0%    { transform: rotateX(100deg), scale(0.5); -webkit-transform: rotateX(100deg), scale(0.5); opacity: 0; }
-  100%  { transform: rotateX(0deg),   scale(0.5); -webkit-transform: rotateX(0deg),   scale(0.5); opacity: 1; }
 }

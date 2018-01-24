@@ -1258,6 +1258,14 @@ gulp-rename@^1.2.2:
   version "1.2.2"
   resolved "http://registry.npm.taobao.org/gulp-rename/download/gulp-rename-1.2.2.tgz#3ad4428763f05e2764dec1c67d868db275687817"
 
+gulp-smushit@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/gulp-smushit/-/gulp-smushit-1.2.0.tgz#e2b6ae397f946f61d995b859dd34e8cf0be5f37d"
+  dependencies:
+    gulp-util "^3.0.7"
+    smosh "^1.2.0"
+    through2 "^2.0.1"
+
 gulp-uglify@^3.0.0:
   version "3.0.0"
   resolved "http://registry.npm.taobao.org/gulp-uglify/download/gulp-uglify-3.0.0.tgz#0df0331d72a0d302e3e37e109485dddf33c6d1ca"
@@ -1270,7 +1278,7 @@ gulp-uglify@^3.0.0:
     uglify-js "^3.0.5"
     vinyl-sourcemaps-apply "^0.2.0"
 
-gulp-util@^3.0.0, gulp-util@^3.0.1, gulp-util@^3.0.8:
+gulp-util@^3.0.0, gulp-util@^3.0.1, gulp-util@^3.0.7, gulp-util@^3.0.8:
   version "3.0.8"
   resolved "http://registry.npm.taobao.org/gulp-util/download/gulp-util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
   dependencies:
@@ -2599,6 +2607,10 @@ set-value@^2.0.0:
 sigmund@~1.0.0:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/sigmund/download/sigmund-1.0.1.tgz#3ff21f198cad2175f9f3b781853fd94d0d19b590"
+
+smosh@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/smosh/-/smosh-1.2.0.tgz#049a7aba2bb2a8f51e919048b908b0542f783df9"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"

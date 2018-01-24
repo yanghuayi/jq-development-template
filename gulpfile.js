@@ -1,19 +1,18 @@
 var gulp = require('gulp'),
     less = require('gulp-less'),
     autoprefixer = require('gulp-autoprefixer'),
-    gulpLoadPlugins = require('gulp-load-plugins'),
     runSequence = require('run-sequence'),
     del = require('del'),
     concat = require('gulp-concat'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify');
-var $ = gulpLoadPlugins();
 var csso = require('gulp-csso');
 var gutil = require('gulp-util');
 var plumber = require('gulp-plumber');
 var connect = require('gulp-connect');
 var gulpCopy = require('gulp-file-copy');
 var order = require('gulp-order');
+var smushit = require('gulp-smushit');
 
 function errrHandler( e ){
     // 控制台发声,错误时beep一下
@@ -22,7 +21,7 @@ function errrHandler( e ){
 }
 
 gulp.task('less',function(){
-    return gulp.src('less/main.scss')
+    return gulp.src('less/main.less')
         .pipe(plumber())
         .pipe(less())
         .pipe(csso())
@@ -37,12 +36,8 @@ gulp.task('less',function(){
 
 gulp.task('images', function() {
   return gulp.src('images/**/*')
-    // .pipe($.cache($.imagemin({
-    //   progressive: true,
-    //   interlaced: true
-    // })))
+    .pipe(smushit({ verbose: true}))
     .pipe(gulp.dest('dist/images'))
-    .pipe($.size({title: 'images'}));
 });
 
 gulp.task('clean', function() {
@@ -94,7 +89,7 @@ gulp.task('build', function(cb) {
 });
 
 gulp.task('watch',function(){
- 	gulp.watch('less/**/*.scss',['less','html']);
+ 	gulp.watch('less/**/*.less',['less','html']);
    gulp.watch('images/**/*.{png,jpg,gif}',['images']);
    gulp.watch('js/*.js',['minifyjs']);
     gulp.watch(['*.html'], ['html']);
